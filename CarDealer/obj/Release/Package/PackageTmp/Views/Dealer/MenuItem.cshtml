@@ -1,0 +1,15 @@
+﻿@model CarDealer.ViewModels.CarMenuViewModel
+
+
+
+Total Cars :> @Model.carList.Count
+<hr/>
+
+    <ul>
+            @foreach (var item in Model.carList)
+            {
+                <li>
+                    @Html.ActionLink(item.Brand, "Browse", new {brand= item.Brand })
+                </li>
+            }
+    </ul>

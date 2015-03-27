@@ -1,0 +1,16 @@
+﻿@model CarDealer.ViewModels.InventoryViewModel
+
+@{
+    ViewBag.Title = "Browse";
+}
+
+
+
+<h3>@ViewBag.brand</h3>
+<hr />
+
+<ul>
+    @foreach (var item in @Model.model) { 
+        <li>@item</li>
+    }    
+</ul>
